@@ -1,37 +1,33 @@
-#!/usr/bin/env groovy
-
-pipeline{
-agent none
-  stages{
-    stages('compile"){
-      steps{
-        script{
-          echo "Compiling the application.."
-        }
-      }
-    }
- stages('build"){
-      steps{
-        script{
-          echo "building the application.."
-        }
-      }
-    }
- stages('test"){
-      steps{
-        script{
-          echo "testing the application.."
-        }
-      }
-    }
- stages('deploy"){
-      steps{
-        script{
-          echo "deploying the application.."
-        }
-      }
-    }
-  }
+pipeline { 
+agent none 
+stages { 
+stage(‘compile’){ 
+steps { 
+script { 
+echo “Compiling the Application…” 
+} 
+} 
+} 
+stage(‘build){ 
+steps { 
+script { 
+echo “Building the Application…” 
+} 
+} 
+} 
+stage(‘test){ 
+steps { 
+script { 
+echo “Testing the Application…” 
+} 
+} 
+} 
+stage(‘deploy){ 
+steps { 
+script { 
+echo “Deploying the Application…” 
+} 
+} 
+} 
+} 
 }
-
-  
